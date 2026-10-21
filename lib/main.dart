@@ -87,3 +87,50 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+ TextButton(
+                  onPressed: isEmpty ? null : decrement,
+                  style: TextButton.styleFrom(
+                    backgroundColor:
+                        isEmpty ? Colors.blue.withOpacity(0.2) : Colors.blue,
+                    fixedSize: const Size(100, 100),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                  ),
+                  child: const Text(
+                    'Saiu',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(width: 32),
+
+                TextButton(
+                  onPressed: isFull ? null : increment,
+                  style: TextButton.styleFrom(
+                    backgroundColor:
+                        isFull ? Colors.blue.withOpacity(0.2) : Colors.blue,
+                    fixedSize: const Size(100, 100),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                  ),
+                  child: const Text(
+                    'Entrar',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
